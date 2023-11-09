@@ -1,0 +1,35 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-size: 62.5%;
+    
+}
+
+.page { 
+    position: relative;
+    height: 100vh;
+}
+
+.container{
+    /* z-index:1;
+    position: absolute; */
+}
+
+.loader {
+    background: pink;
+    height: 100%;
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+
+    animation: loader 10s linear forwards; */
+
+}
