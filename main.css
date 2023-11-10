@@ -1,3 +1,10 @@
+
+:root {
+    --primary-color:#538BC6;
+    --secondary-color:#69BBE6;
+    --tercery-color:#506FB3;
+}
+
 * { 
     margin: 0;
     padding: 0;
@@ -16,20 +23,57 @@ body {
 }
 
 .container{
-    /* z-index:1;
-    position: absolute; */
+    z-index:1;
+    position: absolute;
 }
 
 .loader {
-    background: pink;
+    background: var(--primary-color);
     height: 100%;
     width: 100%;
-    /* display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     z-index: 3;
 
-    animation: loader 10s linear forwards; */
+    animation: loader 5s linear forwards;
+}
 
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.loader .ball {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: white;
+    animation: scaling 2s linear infinite;
+}
+
+.loader .ball:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.loader .ball:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes scaling {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.2);
+    }
 }
