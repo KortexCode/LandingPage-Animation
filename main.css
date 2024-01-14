@@ -57,6 +57,10 @@ body {
     background-color: var(--primary-color);
     transition: height 1s linear;
 }
+.navbar__content-desktop {
+    display: none;
+    
+}
 .open-menu {
     visibility: visible;
     height: 120px;

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- CSS style -->
   <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="desktop.css" media="(min-width: 600px)">
   <!--   Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +27,16 @@
       <nav class="navbar">
         <i id="navbar__btn" class="fas fa-regular fa-bars"></i>
         <img class="navbar__mobile-logo" id="mobile-menu-logo" src="./assets/evo-logo.png" alt="Evo Logo" />
+        <div class="navbar__content-desktop">
+          <ul>
+            <li><a href="#">INFO</a></li>
+            <li><a href="#">GAMES</a></li>
+            <li><a href="#">REWARDS</a></li>
+            <li><a href="#">SIGN UP</a></li>
+          </ul>
+        </div>
         <div class="navbar__content" id="navbar_mobile-menu">
-          <img class="navbar__logo" id="menu-logo" src="./assets/evo-logo.png" alt="Evo Logo" />
+          <!-- <img class="navbar__logo" id="menu-logo" src="./assets/evo-logo.png" alt="Evo Logo" /> -->
           <ul>
             <li><a href="#">INFO</a></li>
             <li><a href="#">GAMES</a></li>
