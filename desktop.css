@@ -12,11 +12,43 @@
 
 .navbar {
   display: grid;
+  grid-template-columns: 15% 85%;
   grid-area: nav;
+  animation: navbar 1.5s ease-in-out 0.5s;
+ 
 }
+@keyframes navbar {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* .navbar_logo {
+  position: absolute;
+  left: 0;
+}   */
+
 .navbar__content-desktop {
-  display: block;
-  
+  display: flex;  
+  justify-self:  center;
+}
+
+.navbar__content-desktop ul {
+  display: flex;
+  list-style: none;
+}
+.navbar__content-desktop li {
+  margin-right: 20px;
+}
+.navbar__content-desktop a {
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 #navbar__btn {
