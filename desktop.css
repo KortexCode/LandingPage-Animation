@@ -1,5 +1,4 @@
 
-
 .container {
   display:grid;
   grid-template-columns: 55% 45%;
@@ -9,7 +8,7 @@
                         "footer   aside";
                         
 }
-
+/* NAVBAR */
 .navbar {
   display: grid;
   grid-template-columns: 15% 85%;
@@ -17,6 +16,7 @@
   animation: navbar 1.5s ease-in-out 0.5s;
  
 }
+
 @keyframes navbar {
   0% {
     transform: translateY(-200px);
@@ -26,16 +26,10 @@
   }
 }
 
-/* .navbar_logo {
-  position: absolute;
-  left: 0;
-}   */
-
 .navbar__content-desktop {
   display: flex;  
   justify-self:  center;
 }
-
 .navbar__content-desktop ul {
   display: flex;
   list-style: none;
@@ -50,7 +44,19 @@
   text-decoration: none;
   color: white;
 }
-
 #navbar__btn {
   display: none;
+}
+
+/* MAIN-CONTENT */
+
+.main-content {
+  padding:80px ;
+  grid-area: section;
+  align-items:start;
+  justify-content: space-evenly;
+}
+.main-content p:last-child{
+  width: 60%;
+  text-align: start;
 }
