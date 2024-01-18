@@ -55,8 +55,19 @@
   grid-area: section;
   align-items:start;
   justify-content: space-evenly;
+  animation: 1.5s main-content 0.5s cubic-bezier(.44,.33,.45,.88);
+
 }
 .main-content p:last-child{
   width: 60%;
   text-align: start;
+}
+
+@keyframes main-content {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
