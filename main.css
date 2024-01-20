@@ -222,6 +222,7 @@ body {
 
 .side-content {
     width: 100%;
+    height: auto;
     padding-top: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -235,7 +236,6 @@ body {
     top:50%;
     left: -250px;
     right: 0;
-  
     font-size: 12px;
     font-weight: 600;
     transform: rotate(-90deg);
