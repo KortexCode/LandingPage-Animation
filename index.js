@@ -1,9 +1,18 @@
 //DOM elements
 const navbarBtn = document.getElementById("navbar__btn");
 const navbar_mobile_menu = document.getElementById("navbar_mobile-menu");
+const loader = document.getElementById("loader");
+const imgIcon = document.getElementsByClassName("footer__img");
+console.log(imgIcon);
 
 //Events
 navbarBtn.addEventListener("click", openMenu);
+
+const x = [...imgIcon];
+console.log(x);
+x.map((item) => {
+  item.addEventListener("click", openModal);
+});
 
 //Functions
 function openMenu() {
@@ -14,4 +23,8 @@ function openMenu() {
   } else {
     navbar_mobile_menu.classList.add("open-menu");
   }
+}
+
+function openModal(event) {
+  console.log("clikeado", event);
 }
