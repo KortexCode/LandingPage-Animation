@@ -19,15 +19,15 @@
 </head>
 
 <body>
+  <!-- Loader -->
+  <section class="loader" id="loader">
+    <div class="ball-container">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+  </section>
   <div class="page">
-    <!-- Loader -->
-    <!-- <section class="loader" id="loader">
-      <div class="ball-container">
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
-      </div>
-    </section> -->
     <!-- Main Content -->
     <section class="container">
       <nav class="navbar">
@@ -77,7 +77,7 @@
             <p>GULTY GEAR REVELATOR</p>
           </div>
           <div class="footer__boxes iori-img__box">
-            <img id="iori-img " class="footer__img" src="./assets/ioris-ticker.png" alt="iori character" />
+            <img id="iori-img " class="footer__img iori" src="./assets/ioris-ticker.png" alt="iori character" />
             <p>THE KING OF FIGTHER XII</p>
           </div>
 
@@ -90,7 +90,8 @@
     </section> -->
   </div>
 
-  <script type="text/javascript" src="./index.js"></script>
+  <script type="module" src="./observer.js"></script>
+  <script type="module" src="./index.js"></script>
 </body>
 
 </html>

@@ -23,10 +23,8 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: auto;
 }
-
-
 
 /* MODAL */
 
@@ -39,12 +37,6 @@ body {
     background-color: rgba(127, 225, 255, 0.293);
 }
 
-.page { 
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
 /* LOADER */
 
 .loader {
@@ -55,10 +47,11 @@ body {
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
     z-index: 4; 
+    visibility: visible;
     animation: loader 3s linear forwards;
 }
-    
 @keyframes loader {
     0% {
         opacity: 1;
@@ -130,13 +123,19 @@ body {
     }
 }
 
+.page { 
+    display: none;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 /* CONTAINER */
 
 .container{
     width: 100%;
     height: auto;
     position: relative; 
-    display: flex;
     flex-direction: column;
     
 }
@@ -363,3 +362,10 @@ footer {
 
 }
 
+/* Classes to show page and hide loader */
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
