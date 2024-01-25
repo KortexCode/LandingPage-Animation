@@ -18,6 +18,10 @@ body {
   height: 100%;
   position: absolute;
 }
+.modal__container {
+  width: 60%;
+  height: 80%;
+}
 
 /* CONTAINER */
 
