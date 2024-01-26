@@ -316,6 +316,7 @@ footer {
     width: 150px;
     bottom:18px;
     object-fit: cover;
+    cursor: pointer;
 }
 .ryu-img__box {
     grid-area: img1;
@@ -359,19 +360,22 @@ footer {
 }
 .modal__container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10% 90%;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 80% 10%;
     width: 100%;
-    height: 80%;
+    height: 75%;
+    border-radius: 8px;
+    padding-bottom: 8px;
     box-shadow: 0px 0px 3px var(--secondary-color);
-    
     background-color: white;
 }
 .modal__btn-close {
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin: 8px 8px;
+    justify-self: center;
+    align-self: end;
+    margin-right: 8px;
     border-radius: 4px; /* Bordes redondeados */
     border: none; /* Elimina el borde del botón */
     justify-self: end;
@@ -387,28 +391,41 @@ footer {
     font-size: 25px;
 } 
 .modal__content--slider {
-    position: relative;
     width: 100%;
-    height: 100%;
+    height: 90%;
+    align-self: center;
     background-color: beige;
 }
 .cards {
-    position: absolute;
-    top:0;
+    display: flex;
     width: 100%;
     height:100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x:contain;
 }
+/* inputs and labels(cards)*/
 .card {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
+    width: 70%;
+    height: 95%;
+    max-width: 290px;
+    min-width: 290px;
+    margin: 4px 8px;
     background-color: #69BBE6;
+    scroll-snap-align: center;
 }
 .modal-visible {
     display: flex;
+}
+input {
+    display:none;
+}
+/* register button */
+.modal__btn-register {
+    width: 200px;
+    height: 90%;
+    justify-self: center;
+    align-self: center;
 }
 
 /* Classes to show page and hide loader */
@@ -418,3 +435,4 @@ footer {
 .visible {
     display: block;
 }
+ 
