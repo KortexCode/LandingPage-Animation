@@ -358,9 +358,13 @@ footer {
     background-color: rgba(127, 225, 255, 0.293);
 }
 .modal__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
     width: 100%;
     height: 80%;
     box-shadow: 0px 0px 3px var(--secondary-color);
+    
     background-color: white;
 }
 .modal__btn-close {
@@ -370,6 +374,7 @@ footer {
     margin: 8px 8px;
     border-radius: 4px; /* Bordes redondeados */
     border: none; /* Elimina el borde del botón */
+    justify-self: end;
     background-color: var(--secondary-color); /* Color de fondo */
     color: white;
     cursor: pointer; /* Cambia el cursor al pasar el ratón sobre el botón */
@@ -381,7 +386,27 @@ footer {
 .modal__container  i {
     font-size: 25px;
 } 
-
+.modal__content--slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+}
+.cards {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height:100%;
+}
+.card {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #69BBE6;
+}
 .modal-visible {
     display: flex;
 }
