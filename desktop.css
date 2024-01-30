@@ -111,6 +111,7 @@ body {
 }
 .side-content p {
   width: 300px;
+  top: 40%;
   left: -340px;
   font-size: var(--s);
   opacity: 0;
@@ -262,9 +263,6 @@ footer img:hover {
 }
 .cards__img {
   height: 300px;
-}
-input {
-  display:block;
 }
 #radio-1:checked ~ .cards #card-1, 
 #radio-2:checked ~ .cards #card-2, 

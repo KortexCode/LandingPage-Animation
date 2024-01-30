@@ -44,19 +44,32 @@ function openMenu() {
 
 function openModal(event) {
   const imgList = document.querySelectorAll(".cards__img");
+  const topText = document.getElementById("modal-top-text");
   const list = [...imgList];
   if (event.target.id === "elfend-img") {
     list[0].src = "./assets/guilty/jam.png";
     list[1].src = "./assets/guilty/eddi.png";
     list[2].src = "./assets/guilty/phele.png";
+    list[0].alt = "Jam Kuradoberi character";
+    list[1].alt = "./Eddi character";
+    list[2].alt = "Ranlethal character";
+    topText.textContent = "GUILTY GEAR REVELATOR";
   } else if (event.target.id === "iori-img") {
     list[0].src = "./assets/kof/athena.png";
     list[1].src = "./assets/kof/leona.png";
     list[2].src = "./assets/kof/ralf.png";
+    list[0].alt = "Athena character";
+    list[1].alt = "Leona character";
+    list[2].alt = "Ralf character";
+    topText.textContent = "THE KING OF FIGHTERS XII";
   } else {
     list[0].src = "./assets/street/sakura.png";
     list[1].src = "./assets/street/cody.png";
     list[2].src = "./assets/street/Ibuki.png";
+    list[0].alt = "Sakura character";
+    list[1].alt = "Cody character";
+    list[2].alt = "Ibuki character";
+    topText.textContent = "STREET FIGHTER IV";
   }
   modal.classList.add("modal-visible");
 }

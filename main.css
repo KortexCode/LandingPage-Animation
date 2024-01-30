@@ -362,20 +362,28 @@ footer {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10% 80% 10%;
-    width: 100%;
-    height: 75%;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
     border-radius: 8px;
     padding-bottom: 8px;
-    box-shadow: 0px 0px 3px var(--secondary-color);
-    background-color: white;
+    box-shadow: 0px 0px 4px var(--secondary-color);
+    background-color: var(--tercery-color);
+}
+.modal__top {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 .modal__btn-close {
-    display: inline-block;
     width: 30px;
     height: 30px;
     justify-self: center;
     align-self: end;
     margin-right: 8px;
+    margin-top: 8px;
     border-radius: 4px; /* Bordes redondeados */
     border: none; /* Elimina el borde del botón */
     justify-self: end;
@@ -390,10 +398,16 @@ footer {
 .modal__container  i {
     font-size: 25px;
 } 
+.modal__top-text {
+    font-size: var(--ms);
+    font-weight: 600;
+    color: white;
+}
 .modal__content--slider {
     width: 100%;
     height: 90%;
     align-self: center;
+    background-color: var(--primary-color);
 }
 .cards {
     display: flex;
@@ -426,14 +440,23 @@ footer {
     display: flex;
 }
 input {
-    display:none;
+    visibility: hidden;
 }
 /* register button */
 .modal__btn-register {
     width: 200px;
     height: 90%;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    color:white;
+    background-color: #143961;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+}
+.modal__btn-register:hover {
+    color:var(--secondary-color);
 }
 
 /* Classes to show page and hide loader */
