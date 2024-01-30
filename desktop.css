@@ -239,6 +239,7 @@ footer img:hover {
 /* MODAL */
 .modal__content--slider {
   position: relative;
+  transform-style: preserve-3d;
 }
 .cards {
   position: absolute;
@@ -256,8 +257,34 @@ footer img:hover {
   width: 300px;
   height: 100%;
   margin: 0 auto;
+  transition: transform 0.5s ease;
   background-color: #69BBE6;
+}
+.cards__img {
+  height: 300px;
 }
 input {
   display:block;
 }
+#radio-1:checked ~ .cards #card-1, 
+#radio-2:checked ~ .cards #card-2, 
+#radio-3:checked ~ .cards #card-3 {
+  transform: translateX(0) scale(1);
+  z-index: 1;
+  opacity: 1;
+}
+#radio-1:checked ~ .cards #card-2, 
+#radio-2:checked ~ .cards #card-3, 
+#radio-3:checked ~ .cards #card-1 {
+  transform: translateX(40%) scale(0.8);
+  z-index: 0;
+  opacity: 0.8;
+}
+#radio-1:checked ~ .cards #card-3, 
+#radio-2:checked ~ .cards #card-1, 
+#radio-3:checked ~ .cards #card-2 {
+  transform: translateX(-40%) scale(0.8);
+  z-index: 0;
+  opacity: 0.8;
+}
+

@@ -18,14 +18,12 @@ navbarBtn.addEventListener("click", openMenu);
 //Add transition event to the loader
 loader.addEventListener("animationend", function () {
   // when loder's animation ends it will change properties of page and loader
-  console.log("terminó");
   loader.classList.add("hidden");
   page.classList.add("visible");
 });
 
 //Open modal
 const imgArray = [...imgIcon]; //Destructuring
-console.log(imgArray);
 imgArray.map((item) => {
   item.addEventListener("click", openModal);
 });
@@ -45,7 +43,21 @@ function openMenu() {
 }
 
 function openModal(event) {
-  console.log("clikeado", event);
+  const imgList = document.querySelectorAll(".cards__img");
+  const list = [...imgList];
+  if (event.target.id === "elfend-img") {
+    list[0].src = "./assets/guilty/jam.png";
+    list[1].src = "./assets/guilty/eddi.png";
+    list[2].src = "./assets/guilty/phele.png";
+  } else if (event.target.id === "iori-img") {
+    list[0].src = "./assets/kof/athena.png";
+    list[1].src = "./assets/kof/leona.png";
+    list[2].src = "./assets/kof/ralf.png";
+  } else {
+    list[0].src = "./assets/street/sakura.png";
+    list[1].src = "./assets/street/cody.png";
+    list[2].src = "./assets/street/Ibuki.png";
+  }
   modal.classList.add("modal-visible");
 }
 
