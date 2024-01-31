@@ -16,11 +16,7 @@ const btnCloseModal = node("#btn-close-modal");
 navbarBtn.addEventListener("click", openMenu);
 
 //Add transition event to the loader
-loader.addEventListener("animationend", function () {
-  // when loder's animation ends it will change properties of page and loader
-  loader.classList.add("hidden");
-  page.classList.add("visible");
-});
+loader.addEventListener("animationend", endAnimation);
 
 //Open modal
 const imgArray = [...imgIcon]; //Destructuring
@@ -40,6 +36,13 @@ function openMenu() {
   } else {
     navbar_mobile_menu.classList.add("open-menu");
   }
+}
+
+function endAnimation() {
+  // when loder's animation ends it will change properties of page and loader
+  loader.classList.add("hidden");
+  page.classList.add("visible");
+  loader.removeEventListener("animationend", endAnimation);
 }
 
 function openModal(event) {
