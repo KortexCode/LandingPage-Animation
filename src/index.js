@@ -1,4 +1,6 @@
 import { observer } from "./observer.js"; //no use
+import "./styles/main.css";
+import "./styles/desktop.css";
 
 const node = (id) => document.querySelector(id); //Se define una notación más sencilla
 

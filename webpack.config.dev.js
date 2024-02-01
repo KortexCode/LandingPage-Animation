@@ -1,5 +1,6 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin"); //Para
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -25,7 +26,13 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: "html-loader",
+        use: {
+          loader: "html-loader",
+        },
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -39,6 +46,9 @@ module.exports = {
       title: "Evo Event",
       inject: true,
       template: "./public/index.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
     }),
   ],
   devServer: {
