@@ -38,7 +38,7 @@ module.exports = {
       filename: "index.html",
       title: "Evo Event",
       inject: true,
-      template: "dist/index.html",
+      template: "./public/index.html",
     }),
   ],
   devServer: {
@@ -47,7 +47,7 @@ module.exports = {
     },
     compress: true,
     historyApiFallback: true, //para tener un historial
-    port: 9000, //configura el puerto
+    port: 8080, //configura el puerto
     open: true,
   },
 };

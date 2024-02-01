@@ -37,7 +37,7 @@ module.exports = {
       filename: "index.html",
       title: "Evo Event",
       inject: true,
-      template: "./index.html",
+      template: "./public/index.html",
     }),
   ],
 };
