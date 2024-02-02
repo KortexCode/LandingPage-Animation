@@ -1,4 +1,13 @@
 import { observer } from "./observer.js"; //no use
+import jamImg from "./assets/guilty/jam.png";
+import eddiImg from "./assets/guilty/eddi.png";
+import pheleImg from "./assets/guilty/phele.png";
+import anthenaImg from "./assets/kof/athena.png";
+import leonaImg from "./assets/kof/leona.png";
+import ralfImg from "./assets/kof/ralf.png";
+import sakuraImg from "./assets/street/sakura.png";
+import codyImg from "./assets/street/cody.png";
+import ibukiImg from "./assets/street/Ibuki.png";
 import "./styles/main.css";
 import "./styles/desktop.css";
 
@@ -52,25 +61,25 @@ function openModal(event) {
   const topText = document.getElementById("modal-top-text");
   const list = [...imgList];
   if (event.target.id === "elfend-img") {
-    list[0].src = "./src/assets/guilty/jam.png";
-    list[1].src = "./src/assets/guilty/eddi.png";
-    list[2].src = "./src/assets/guilty/phele.png";
+    list[0].src = jamImg;
+    list[1].src = eddiImg;
+    list[2].src = pheleImg;
     list[0].alt = "Jam Kuradoberi character";
     list[1].alt = "./Eddi character";
     list[2].alt = "Ranlethal character";
     topText.textContent = "GUILTY GEAR REVELATOR";
   } else if (event.target.id === "iori-img") {
-    list[0].src = "./src/assets/kof/athena.png";
-    list[1].src = "./src/assets/kof/leona.png";
-    list[2].src = "./src/assets/kof/ralf.png";
+    list[0].src = anthenaImg;
+    list[1].src = leonaImg;
+    list[2].src = ralfImg;
     list[0].alt = "Athena character";
     list[1].alt = "Leona character";
     list[2].alt = "Ralf character";
     topText.textContent = "THE KING OF FIGHTERS XII";
   } else {
-    list[0].src = "./src/assets/street/sakura.png";
-    list[1].src = "./src/assets/street/cody.png";
-    list[2].src = "./src/assets/street/Ibuki.png";
+    list[0].src = sakuraImg;
+    list[1].src = codyImg;
+    list[2].src = ibukiImg;
     list[0].alt = "Sakura character";
     list[1].alt = "Cody character";
     list[2].alt = "Ibuki character";

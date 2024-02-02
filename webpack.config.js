@@ -9,6 +9,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "assets/[name][hash][ext][query]",
+    publicPath: "./",
   },
   mode: "production",
   resolve: {
