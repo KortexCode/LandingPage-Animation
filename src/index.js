@@ -14,7 +14,7 @@ import "./styles/main.css";
 //Verificar
 const windowWidth = window.innerWidth;
 if (windowWidth > 850) {
-  import(/* webpackChunkName: "responsive" */ "./styles/desktop.css");
+  import(/* webpackChunkName: "desktop" */ "./styles/desktop.css");
 } else {
   //Dinamic import of desktop.css
   window.addEventListener("resize", loadResponsive);
