@@ -9,7 +9,16 @@ import sakuraImg from "./assets/street/sakura.png";
 import codyImg from "./assets/street/cody.png";
 import ibukiImg from "./assets/street/Ibuki.png";
 import "./styles/main.css";
-import "./styles/desktop.css";
+/* import "./styles/desktop.css"; */
+
+//Verificar
+const windowWidth = window.innerWidth;
+if (windowWidth > 850) {
+  import(/* webpackChunkName: "responsive" */ "./styles/desktop.css");
+} else {
+  //Dinamic import of desktop.css
+  window.addEventListener("resize", loadResponsive);
+}
 
 const node = (id) => document.querySelector(id); //Se define una notación más sencilla
 
@@ -23,6 +32,7 @@ const modal = node(".modal");
 const btnCloseModal = node("#btn-close-modal");
 
 //EVENTS
+
 //Open mobile menu
 navbarBtn.addEventListener("click", openMenu);
 
@@ -39,6 +49,17 @@ imgArray.map((item) => {
 btnCloseModal.addEventListener("click", closeModal);
 
 //Functions
+
+function loadResponsive(event) {
+  //it gets the width of the window
+  const screenWidth = event.target.innerWidth;
+  if (screenWidth > 850) {
+    //if the windows has 850px up
+    import(/* webpackChunkName: "responsive" */ "./styles/desktop.css");
+    window.removeEventListener("resize", loadResponsive);
+  }
+}
+
 function openMenu() {
   //Add or remove the class  "open-menu" to close or open the mobile menu.
   const open = navbar_mobile_menu.classList.contains("open-menu");

@@ -57,5 +57,8 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [new TeserPlugin(), new CssMinimizerPlugin()],
+    /*  splitChunks: {
+      chunks: "all",
+    }, */
   },
 };
