@@ -15,6 +15,10 @@ module.exports = {
   mode: "production",
   resolve: {
     extensions: [".js"],
+    alias: {
+      "@styles": path.resolve(__dirname, "src/styles/"),
+      "@assets": path.resolve(__dirname, "src/assets/"),
+    },
   },
   module: {
     rules: [
@@ -50,7 +54,7 @@ module.exports = {
       template: "./public/index.html",
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css",
+      filename: "styles/[name].[contenthash].css",
     }),
     new CleanWebpackPlugin(),
   ],

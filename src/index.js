@@ -3,18 +3,17 @@ import jamImg from "./assets/guilty/jam.png";
 import eddiImg from "./assets/guilty/eddi.png";
 import pheleImg from "./assets/guilty/phele.png";
 import anthenaImg from "./assets/kof/athena.png";
-import leonaImg from "./assets/kof/leona.png";
-import ralfImg from "./assets/kof/ralf.png";
-import sakuraImg from "./assets/street/sakura.png";
-import codyImg from "./assets/street/cody.png";
-import ibukiImg from "./assets/street/Ibuki.png";
-import "./styles/main.css";
-/* import "./styles/desktop.css"; */
+import leonaImg from "@assets/kof/leona.png";
+import ralfImg from "@assets/kof/ralf.png";
+import sakuraImg from "@assets/street/sakura.png";
+import codyImg from "@assets/street/cody.png";
+import ibukiImg from "@assets/street/Ibuki.png";
+import "@styles/main.css";
 
 //Verificar
 const windowWidth = window.innerWidth;
 if (windowWidth > 850) {
-  import(/* webpackChunkName: "desktop" */ "./styles/desktop.css");
+  import(/* webpackChunkName: "desktop" */ "@styles/desktop.css");
 } else {
   //Dinamic import of desktop.css
   window.addEventListener("resize", loadResponsive);
